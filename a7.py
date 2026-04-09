@@ -225,28 +225,28 @@ class BayesClassifier:
             words - list of tokens to update frequencies of
             freqs - dictionary of frequencies to update
         """
-movies = "movie_reviews"
+    movies = "movie_reviews"
 
-words = tokenize(movies)
-
-
-with open("sorted_stoplist.txt", "r", encoding="utf8") as f:
-    stoplist = f.read()
-tokenize_stoplist = tokenize(stoplist)
-print(tokenize_stoplist)
-
-freqs = {}
-
-for word in words:
-    if word not in tokenize_stoplist:
-        if word in freqs:
-            freqs[word] += 1
-        else:
-            freqs[word] = 1
+    words = tokenize(movies)
 
 
-total_unique_words = len(freqs)
-print(f"Unique words: {total_unique_words}")
+    with open("sorted_stoplist.txt", "r", encoding="utf8") as f:
+        stoplist = f.read()
+    tokenize_stoplist = tokenize(stoplist)
+    print(tokenize_stoplist)
+
+    freqs = {}
+
+    for word in words:
+     if word not in tokenize_stoplist:
+            if word in freqs:
+                freqs[word] += 1
+            else:
+                freqs[word] = 1
+
+
+    total_unique_words = len(freqs)
+    print(f"Unique words: {total_unique_words}")
 pass  # remove this line once you've implemented this method
 
 
