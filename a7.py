@@ -87,17 +87,18 @@ class BayesClassifier:
         # test your code with neutral reviews)
             if filename.startswith(self.pos_file_prefix):
                 self.update_dict(tokens,self.pos_freqs)
-                self.save_dict(self.pos_freqs, self.pos_filename)
+                
             elif filename.startswith(self.neg_file_prefix):
                 self.update_dict(tokens, self.neg_freqs)
-                self.save_dict(self.neg_freqs, self.neg_filename)
+                
 
         # Updating frequences: to update the frequencies for each file, you need to get
         # the text of the file, tokenize it, then update the appropriate dictionary for
         # those tokens. We've asked you to write a function `update_dict` that will make
         # your life easier here. Write that function first then pass it your list of
         # tokens from the file and the appropriate dictionary
-
+        self.save_dict(self.pos_freqs, self.pos_filename)
+        self.save_dict(self.neg_freqs, self.neg_filename)
 
         # for debugging purposes, it might be useful to print out the tokens and their
         # frequencies for both the positive and negative dictionaries
@@ -211,8 +212,7 @@ class BayesClassifier:
                 if token != "":
                     tokens.append(token.lower())
                     token = ""
-                if c.strip() != "":
-                    tokens.append(str(c.strip()))
+                
 
         if token != "":
             tokens.append(token.lower())
@@ -253,12 +253,12 @@ if __name__ == "__main__":
     assert a_dictionary["too"] == 1, "update_dict test 4"
     print("update_dict tests passed.")
 
-    # pos_denominator = sum(b.pos_freqs.values())
-    # neg_denominator = sum(b.neg_freqs.values())
+    pos_denominator = sum(b.pos_freqs.values())
+    neg_denominator = sum(b.neg_freqs.values())
 
-    # print("\nThese are the sums of values in the positive and negative dicitionaries.")
-    # print(f"sum of positive word counts is: {pos_denominator}")
-    # print(f"sum of negative word counts is: {neg_denominator}")
+    print("\nThese are the sums of values in the positive and negative dicitionaries.")
+    print(f"sum of positive word counts is: {pos_denominator}")
+    print(f"sum of negative word counts is: {neg_denominator}")
 
     # print("\nHere are some sample word counts in the positive and negative dicitionaries.")
     # print(f"count for the word 'love' in positive dictionary {b.pos_freqs['love']}")
