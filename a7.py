@@ -251,7 +251,7 @@ class BayesClassifier:
                 freqs[word] = 1
 
 
-pass  # remove this line once you've implemented this method
+ 
 
 
 if __name__ == "__main__":
@@ -298,11 +298,12 @@ if __name__ == "__main__":
     print(f"P('science'| pos) {(b.pos_freqs['science']+1)/pos_denominator}")
     print(f"P('science'| neg) {(b.neg_freqs['science']+1)/neg_denominator}")
 
-    # # uncomment the below lines once you've implemented `classify`
+    # uncomment the below lines once you've implemented `classify`
     print("\nThe following should all be positive.")
     print(b.classify('I love computer science'))
-    # print(b.classify('this movie is fantastic'))
-    # print("\nThe following should all be negative.")
-    # print(b.classify('rainy days are the worst'))
-    # print(b.classify('computer science is terrible'))
-    pass
+    print(b.classify('this movie is fantastic'))
+    print("\nThe following should all be negative.")
+    print(b.classify('rainy days are the worst'))
+    print(b.classify('computer science is terrible'))
+    print(" I did it :)")
+    
