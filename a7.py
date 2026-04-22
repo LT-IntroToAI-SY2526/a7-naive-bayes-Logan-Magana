@@ -156,8 +156,8 @@ class BayesClassifier:
 
         # for debugging purposes, it may help to print the overall positive and negative
         # probabilities
-        
-
+        print(f"Positive probability: {pos_score}")
+        print(f"Negative probability: {neg_score}")
         # determine whether positive or negative was more probable (i.e. which one was
         # larger)
         if pos_score > neg_score:
@@ -299,11 +299,22 @@ if __name__ == "__main__":
     # print(f"P('science'| neg) {(b.neg_freqs['science']+1)/neg_denominator}")
 
     # uncomment the below lines once you've implemented `classify`
-    print("\nThe following should all be positive.")
-    print(b.classify('I love computer science'))
-    print(b.classify('this movie is fantastic'))
-    print("\nThe following should all be negative.")
-    print(b.classify('rainy days are the worst'))
-    print(b.classify('computer science is terrible'))
-    print(" I did it :)")
-    
+    # print("\nThe following should all be positive.")
+    # print(b.classify('I love computer science'))
+    # print(b.classify('this movie is fantastic'))
+    # print("\nThe following should all be negative.")
+    # print(b.classify('rainy days are the worst'))
+    # print(b.classify('computer science is terrible'))
+    # print(" I did it :)")
+    print("\nThe following is to test out the method with each groups responses")
+    print(b.classify("Summer break is almost here.  I am super excited and I know that it's going to be the best"))
+    print(b.classify("I can't wait for the field trip! I love how the CME building looks!"))
+    print(b.classify("I feel really good about my science test. There was a bit of dfficult questions, but my love for science pulled through and made it overally easy."))
+    print(b.classify("I am nervous that I won't do well on the AP tests.  I have studied, but I don't think I'll do that well"))
+    print(b.classify("I do not feel like I did so well in the interview, my voice was shaky and I feel like I did not elaborate much. Although I did bad, hopefully it is good enough for the internship"))
+    print(b.classify("The Burger King near my cousin's house was HORRIBLE! The food was mediocre at best and it gave me food poisoning. To top it all off, the place smelled like expired meat and there was even a cockroach on the wall!"))
+    print("\nThe following is to test out custom movie reviews")
+    print(b.classify("A frenzied film with a patchwork plotline. Its bright and shiny on the outside, but hollow throughout... Though its messy, convoluted journey may be enough for those who worship, for the rest of us, there are only two words that come to mind: 'Mama mia!' "))
+    print(b.classify("It’s sad to call a movie booming with decades of imaginative characters and settings 'disposable,' but there arent enough Pikmin in the world to distract you from the blatant franchise baiting here."))
+    print(b.classify("This Movie is excellent. Disliked Nothing. Super Mario Bros. was and still is my favorite game as a young man and depicts everything you loved about the games"))
+    print(b.classify("The Super Mario Galaxy Movie is undoubtedly a visual assault—and whether that’s appealing or revolting is up to the individual—but there’s no denying the creativity and energy on display"))
