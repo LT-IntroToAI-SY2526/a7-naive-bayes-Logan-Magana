@@ -315,6 +315,6 @@ if __name__ == "__main__":
     print(b.classify("The Burger King near my cousin's house was HORRIBLE! The food was mediocre at best and it gave me food poisoning. To top it all off, the place smelled like expired meat and there was even a cockroach on the wall!"))
     print("\nThe following is to test out custom movie reviews")
     print(b.classify("A frenzied film with a patchwork plotline. Its bright and shiny on the outside, but hollow throughout... Though its messy, convoluted journey may be enough for those who worship, for the rest of us, there are only two words that come to mind: 'Mama mia!' "))
-    print(b.classify("It’s sad to call a movie booming with decades of imaginative characters and settings 'disposable,' but there arent enough Pikmin in the world to distract you from the blatant franchise baiting here."))
+    print(b.classify("Its sad to call a movie booming with decades of imaginative characters and settings 'disposable,' but there arent enough Pikmin in the world to distract you from the blatant franchise baiting here."))
     print(b.classify("This Movie is excellent. Disliked Nothing. Super Mario Bros. was and still is my favorite game as a young man and depicts everything you loved about the games"))
-    print(b.classify("The Super Mario Galaxy Movie is undoubtedly a visual assault—and whether that’s appealing or revolting is up to the individual—but there’s no denying the creativity and energy on display"))
+    print(b.classify("The Super Mario Galaxy Movie is undoubtedly a visual assault—and whether thats appealing or revolting is up to the individual—but there’s no denying the creativity and energy on display"))
